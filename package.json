@@ -16,6 +16,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^0.2.1",
     "prettier": "^3.5.3"
   }
 }
