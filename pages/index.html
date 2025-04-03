@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    p {
+      font-size: 18px;
+    }
+    #root {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    #root .word {
+      display: inline-block;
+      margin: 0;
+      padding: 5px 2px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+    
+  <script>
+
+    function HomeBorali() {
+      let content = "Larissa, eu amo você. Se você me ama, dá uma risadinha! \\o/";
+      content += " Essa é uma página de exemplo para o projeto Next.js.";
+      content += " Essa página foi criada para testar o Next.js e o Vercel.";
+    
+      var final_value = "";
+      content.split(" ").map((word) => {
+        final_value +=
+          '<span key="' + word + '" class=\"word\">' + word + "</span>";
+      });
+    
+      return final_value;
+      
+    }
+
+    function start() {
+      const root = document.getElementById("root");
+      console.log("Iniciando o aplicativo...");
+      console.log(HomeBorali())
+      root.innerHTML = HomeBorali();
+    }
+
+    
+    function eventListener(event, callback) {
+      if (document.readyState === "loading") {
+        document.addEventListener(event, callback);
+      } else {
+        callback();
+      }
+    }
+    eventListener("DOMContentLoaded", start);
+  </script>
+</body>
+</html>
