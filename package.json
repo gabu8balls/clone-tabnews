@@ -12,7 +12,7 @@
     "build:worker": "cloudflare",
     "dev:worker": "wrangler dev --port 8771",
     "preview:worker": "npm run build:worker && npm run dev:worker",
-    "deploy:worker": "npm run build:worker && wrangler deplay"
+    "deploy:worker": "npm run build:worker && wrangler deploy"
   },
   "author": "",
   "license": "MIT",
@@ -23,6 +23,10 @@
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "^0.2.1",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "wrangler": "^4.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
