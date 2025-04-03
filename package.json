@@ -6,13 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "lint:check": "prettier --check .",
-    "lint:fix": "prettier --write .",
-    "build": "next build",
-    "start": "next start",
-    "build:worker": "cloudflare",
-    "dev:worker": "wrangler dev --port 8771",
-    "preview:worker": "npm run build:worker && npm run dev:worker",
-    "deploy:worker": "npm run build:worker && wrangler deploy"
+    "lint:fix": "prettier --write ."
   },
   "author": "",
   "license": "MIT",
@@ -22,7 +16,6 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^0.2.1",
     "prettier": "^3.5.3"
   },
   "engines": {
